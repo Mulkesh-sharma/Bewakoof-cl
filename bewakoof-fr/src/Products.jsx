@@ -23,10 +23,10 @@ function Products({ title, path }) {
     try {
       let response;
       if (category === "Men's Clothing") {
-        response = await axios.get('http://localhost:5000/mensdata');
+        response = await axios.get('https://bewakoof-api-gwad.onrender.com/mensdata');
         setMensData(response.data || []); // Directly setting response.data
       } else if (category === "Women's Clothing") {
-        response = await axios.get('http://localhost:5000/womensdata');
+        response = await axios.get('https://bewakoof-api-gwad.onrender.com/womensdata');
         setWomensData(response.data || []); // Directly setting response.data
       }
       setLoading(false);
